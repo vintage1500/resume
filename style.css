@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: #ffffff;
+}
+
+a {
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #3399ff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 0 20px;
+}
+
+.information li {
+    list-style-type: none;
+    margin-bottom: 5px;
+    font-size: 1.05em;
+}
+
+.skills {
+    padding-left: 50px;
+}
+
+.skills li {
+    list-style-type: disc;
+}
+
+article {
+    padding-left: 40px;
+}
+
+.download-btn {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.download-btn a {
+    padding: 10px;
+    border: 4px solid #002447 ;
+    border-radius: 5px;
+}
+
+.download-btn a:hover {
+    background-color: #041526;
+}
+
+footer {
+    margin-top: 30px;
+    background-color: #1a1a1a;
+}
+
+footer p {
+    text-align: center;
+    margin: 0px;
+    padding: 20px;
+}
