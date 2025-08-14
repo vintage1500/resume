@@ -6,7 +6,9 @@ body {
     padding: 0;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: #ffffff;
 }
 
@@ -21,7 +23,7 @@ a:hover {
 
 .container {
     max-width: 1200px;
-    margin: 0 auto; 
+    margin: 0 auto;
     padding: 0 20px;
 }
 
@@ -39,6 +41,18 @@ a:hover {
     list-style-type: disc;
 }
 
+.work-experience > li {
+    margin-top: 15px;
+}
+
+.ordered-list {
+    margin-top: 15px;
+}
+
+.ordered-list li {
+    list-style-type: disc;
+}
+
 article {
     padding-left: 40px;
 }
@@ -50,7 +64,7 @@ article {
 
 .download-btn a {
     padding: 10px;
-    border: 4px solid #002447 ;
+    border: 4px solid #002447;
     border-radius: 5px;
 }
 

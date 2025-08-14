@@ -1,0 +1,281 @@
+body {
+    background-color: #1e1e1e;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: #f0f8ff;
+}
+
+section {
+    margin-top: 50px;
+    padding: 30px;
+}
+
+footer {
+    border-top: 1px solid #0000ff;
+}
+
+.main-h {
+    position: sticky;
+    top: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 300px;
+}
+
+img {
+    border-radius: 10px;
+}
+
+header {
+    box-shadow: 0px 4px 10px #0000ff;
+    position: fixed;
+}
+
+h1 {
+    text-align: center;
+}
+
+input {
+    display: block;
+}
+
+.border-div {
+    height: 100px;
+    border: 2px solid black;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.red-div,
+.blue-div,
+.green-div,
+.position-div,
+.position-div-absolute {
+    height: 50px;
+    width: 50px;
+}
+
+.red-div {
+    background-color: red;
+}
+
+.blue-div {
+    background-color: blue;
+}
+
+.green-div,
+.position-div,
+.position-div-absolute {
+    background-color: green;
+}
+
+.position-div {
+    position: absolute;
+    /* bottom: 20px;  */
+    right: 20px;
+}
+
+.position-div-absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn {
+    background: #4da6ff;
+    color: #111;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    /* ключевая строка: какие свойства и как анимировать */
+    transition: background .25s ease, transform .2s ease, box-shadow .25s ease;
+}
+
+.btn:hover {
+    background: #3399ff;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .35);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .3);
+}
+
+.spinner {
+    width: 36px;
+    height: 36px;
+    border: 3px solid rgba(255, 255, 255, .15);
+    border-top-color: #4da6ff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.pulse {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #4da6ff;
+    box-shadow: 0 0 0 0 rgba(77, 166, 255, .6);
+    animation: pulse 1.5s ease-out infinite;
+    margin: 20px auto;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(77, 166, 255, .7);
+    }
+
+    100% {
+        box-shadow: 0 0 0 24px rgba(77, 166, 255, 0);
+    }
+}
+
+
+.parallax {
+    min-height: 50vh;
+    background-image: url("plane.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* эффект глубины */
+    position: relative;
+}
+
+.parallax::after {
+    /* затемняем фон для читаемости текста */
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .35), rgba(0, 0, 0, .35));
+}
+
+.parallax-content {
+    position: relative;
+    /* над оверлеем */
+    z-index: 1;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.login-form {
+    max-width: 360px;
+    margin: 40px auto;
+    background: #242424;
+    border: 1px solid #3a3a3a;
+    border-radius: 12px;
+    padding: 20px 20px 24px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, .35);
+}
+
+.login-form h3 {
+    margin: 0 0 16px;
+    color: #fff;
+    text-align: center;
+}
+
+.login-form label {
+    display: block;
+    margin: 10px 0 6px;
+    font-size: .95rem;
+    color: #cfcfcf;
+}
+
+.login-form input {
+    width: 94%;
+    padding: 10px 12px;
+    border: 1px solid #3a3a3a;
+    border-radius: 8px;
+    background: #1b1b1b;
+    color: #eaeaea;
+    outline: none;
+    transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.login-form input::placeholder {
+    color: #8d8d8d;
+}
+
+.login-form input:focus {
+    border-color: #4da6ff;
+    box-shadow: 0 0 0 3px rgba(77, 166, 255, .25);
+    background: #161616;
+}
+
+.login-form .btn {
+    width: 100%;
+    margin-top: 14px;
+}
+
+.form-hint {
+    margin-top: 10px;
+    font-size: .9rem;
+    text-align: center;
+    color: #bdbdbd;
+}
+
+.form-hint a {
+    color: #4da6ff;
+}
+
+
+/* Сетка без медиа-запросов: сама подстраивается */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+/* Карточка */
+.card {
+    background: #2a2a2a;
+    /* тёмная тема */
+    border: 1px solid #3a3a3a;
+    border-radius: 12px;
+    overflow: hidden;
+    /* скругление для картинки тоже */
+}
+
+/* Картинка сохраняет пропорции и красиво обрезается по контейнеру */
+.card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    /* или 16/9, если так красивее */
+    object-fit: cover;
+    display: block;
+}
+
+/* Подпись */
+.card figcaption {
+    padding: 10px 12px;
+    font-size: 0.95rem;
+    color: #e0e0e0;
+}
+
+
+@media all and (max-width: 600px) {
+    .border-div {
+        flex-wrap: wrap;
+    }
+}
